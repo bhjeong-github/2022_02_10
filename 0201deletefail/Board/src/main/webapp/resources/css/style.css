@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/*font import - google font*/
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/*전체 선택자*/
+*{margin: 0; padding: 0;}
+
+li{list-style: none;}
+a{text-decoration: none;}
+a:focus, a:hover{color:black; text-decoration:none; }
+body{font-family: 'Noto Sans KR', sans-serif;  font-size:16px; background:none;}
+
+/*헤더*/
+#wrapper{width:100%;}
+.topmenu{height:40px; background-color: white;}
+.tnb{float:right;}
+.tnb li{float:left; width:70px; height:40px; text-align: center; }
+.tnb li a{display: block; padding-top:10px; height:100%;  box-sizing: border-box; position: relative; color:black;}
+.tnb li:last-child a::before{background: none;}
+.tnb li a::before{content: ""; position: absolute; top:12px; right:3px; background-color: black; width: 1px; height:18px;}
+.tnb li a:hover{text-decoration:none;}
+header{border-top:8px solid black; position:fixed; top:0; left:0; z-index:10; background-color: white;}
+#header{background-color:white; height:121px;}
+.container{width:1200px; margin:0 auto; }
+.logo{width:320px; margin:0 auto; padding-top:15px; font-family: 'Yanone Kaffeesatz', sans-serif;  text-align: center;}
+.logo a{color:black; font-size:1.5em;}
+.logo a:hover{text-decoration:none; color:black;}
+
+/*네비게이션*/
+#gnb{width:360px; margin:0 auto; height:60px; }
+#gnb>ul>li{float:left; width:120px; text-align: center;height:60px; /*position: relative; padding-right:50px;*/ padding-top:10px;}
+/*#gnb li:last-child{padding-right: 0;}*/
+#gnb>ul>li>a{color:black; display:block;  height:100%;}
+#gnb>ul>li>a:hover {border-bottom:8px solid black; text-decoration:none;}
+
+/*서브메뉴*/
+.lnb{width:100%; height:0; position: absolute; top:184px; left:0; background-color: white; display:none; overflow: hidden; z-index:20;box-sizing: border-box; box-shadow: 0 5px 8px gray;}
+.lnb>.container>ul>li{float: none; text-align:justify; width:320px;}
+.lnb>.container>ul>li>a{color:black; display:block;  padding:15px 0;}
+.lnb>.container>ul>li>a:hover{border-style: none;}
+#gnb>ul>li>a:hover .lnb{display:block;}
+
+/*게시판*/
+li{list-style-type:none;}
+.wrap{width:100%;}
+.relative{position:relative;}
+.z-index{z-index:12;/* background-color:white;*/}
+.wrap1{ margin-bottom:100px; }
+.wrap2{padding-top:100px;}
+
+/*메인 영역*/
+.relative{position: relative;  z-index: 2;}
+.banner{margin-top:169px; }
+.main-contents{height:500px; }
+.content{float:left; width:33.3333%; height:500px;}
+.one{background:url(/resources/img/hair01.png) no-repeat; background-size: cover; background-position-x: -113px}
+.two{background:url(/resources/img/hair02.png) no-repeat; background-size: cover; background-position-x: -312px}
+.three{background:url(/resources/img/hair03.png) no-repeat; background-size: cover; background-position-x: -257px}
+.company{height:550px; background-color:silver; }
+.content img{width:100%;}
+
+/*푸터*/
+footer{background-color: black;  height:150px; z-index:1; color:white;}
+footer p{padding-top:60px; text-align: center; box-sizing: border-box;}

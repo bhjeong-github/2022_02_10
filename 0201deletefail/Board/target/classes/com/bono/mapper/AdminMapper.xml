@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bono.mapper.AdminMapper">
+
+<select id="adminSellList" resultType="com.bono.domain.SellVO">
+	select sellno, resno, date, title, style, price 
+    from tbl_sell
+    where date between #{start} and #{end}
+</select>
+
+</mapper>	
